@@ -1,15 +1,55 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sushi Menu App</title>
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sushi Menu App 🍣</title>
+  <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-  <h1>Sushi Menu App</h1>
-  <p>Seu app foi carregado com sucesso!</p>
-  <script src="main.js"></script>
+  <div class="container">
+    <h1>Sushi Menu App 🍣</h1>
+
+    <div class="input-group">
+      <label for="mesa">Mesa:</label>
+      <input id="mesa" type="number" placeholder="Número da mesa" />
+    </div>
+
+    <div class="input-group">
+      <label for="barca">Barca:</label>
+      <select id="barca">
+        <option value="94">Super Barca 94 PCS</option>
+        <option value="75">Barca Level 75 PCS</option>
+        <option value="53">1/2 Barca Esp 53 PCS</option>
+        <option value="38">1/2 Barca Level 38 PCS</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <h2>Peças:</h2>
+      <div class="input-group">
+        <label for="item">Item:</label>
+        <input id="item" type="text" placeholder="Código do item" />
+      </div>
+      <div class="input-group">
+        <label for="quantidade">Qtd:</label>
+        <input id="quantidade" type="number" placeholder="Quantidade" />
+      </div>
+      <div class="input-group">
+        <label for="obs">Obs:</label>
+        <input id="obs" type="text" placeholder="Ex: sem molho" />
+      </div>
+      <button id="adicionar">Adicionar</button>
+    </div>
+
+    <h2>Selecionados:</h2>
+    <ul id="selecionados"></ul>
+    <p>Total de peças: <span id="total">0</span></p>
+    <p>Peças restantes: <span id="restante">0</span></p>
+    <button id="confirmar">Confirmar Pedido</button>
+    <p id="mensagem"></p>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
